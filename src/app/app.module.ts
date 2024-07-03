@@ -16,9 +16,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { MatCardModule } from '@angular/material/card';
+import { ApplicationUsersComponent } from './application-users/application-users.component';
+import { SingleApplicationUserComponent } from './application-users/single-application-user/single-application-user.component';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent],
+  declarations: [AppComponent, UsersComponent, ApplicationUsersComponent, SingleApplicationUserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

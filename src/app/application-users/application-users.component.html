@@ -1,0 +1,7 @@
+<div class="container">
+    <h2>Application Users</h2>
+    <hr>
+    <div *ngFor="let name of appliationUserNames; let userId=index">
+        <app-single-application-user [userName]=name [userId]=userId></app-single-application-user>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: azure;
+}
+
+h2 {
+    color: rgb(49, 156, 243)
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+}
