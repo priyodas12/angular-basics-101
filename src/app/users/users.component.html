@@ -6,21 +6,36 @@
                 Single click event
             </h2>
             <h5>The button was single clicked {{this.singleClickedNumber}} times.</h5>
-            <button mat-flat-button (click)="numberChangeOnSingleClick()">Single click)</button>
+            <button mat-flat-button (click)="numberChangeOnSingleClick()">Single click</button>
             <hr>
             <h2>
                 Double click event
             </h2>
             <h5>The button was double clicked {{this.doubleClickedNumber}} times.</h5>
-            <button  mat-raised-button (dblclick)="numberChangeOnDoubleClick()">(Double click)</button>
+            <button  mat-raised-button (dblclick)="numberChangeOnDoubleClick()">Double click</button>
             <hr>
             <h2>
                 Mouse-Over event
             </h2>
             <!-- mouseover, mousedown, mouseout, mouseup ,mousemove-->
             <h5>Mouse over on button {{this.mouseOverNumber}} times.</h5>
-            <button  mat-raised-button (mousemove)="onMouseOver($event)">(Mouse Over)</button>
-        
+            <button  mat-raised-button (mouseover)="onMouseOver($event)">Mouse Over</button>
+            <hr>
+            <!-- One way data binding -->
+            <h2>
+                One way data binding
+            </h2>
+            <img [src]="imgUrl" alt="Angular logo"><br>
+            <button [attr.aria-label]="buttonLabel">Click me</button>
+            <div [class.highlight]="isHighlightedText">Highlight me!</div>
+            <div [style.color]="textColor">Color me!</div>
+            <hr>
+            <!--Two way data binding-->
+            <h2>
+                Two way data binding
+            </h2>
+            <input [(ngModel)]="myName" placeholder="Enter your name">
+            <p>Your name is: {{ myName }}</p>
         </mat-card-title> 
     </mat-card-header> 
     <mat-card-content class="custom-card-content"> 

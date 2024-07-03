@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-users',
@@ -13,6 +11,20 @@ export class UsersComponent {
   singleClickedNumber: number = 0;
   doubleClickedNumber: number = 0;
   mouseOverNumber: number = 0;
+
+  /**One way data binding types */
+
+  //property binding
+  imgUrl: string = "https://www.linearity.io/blog/content/images/size/w1280/format/avif/2023/06/how-to-create-a-car-NewBlogCover.png";
+  //attribute binding
+  buttonLabel: string = 'Button Label';
+  //Class binding
+  isHighlightedText: boolean = true;
+  //Style binding
+  textColor: string = "red";
+
+  /**Two way data binding */
+  myName: string = "";
 
   numberChangeOnSingleClick() { 
     this.singleClickedNumber += 1;
