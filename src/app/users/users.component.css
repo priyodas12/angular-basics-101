@@ -3,31 +3,38 @@
     margin: 20px;
 }
 
-.custom-card-header{
-   color:darkolivegreen;
+.custom-card-header {
+    color: darkolivegreen;
     margin: 20px;
 }
 
-.custom-card-content{
+.custom-card-content {
     margin: 20px;
-    color :red;
+    color: red;
 }
 
-h2{
-    color:rgb(156, 223, 33)
+h2 {
+    color: rgb(75, 104, 22)
 }
 
-h5{
+h5 {
     color: lightcoral
 }
 
-button{
-    background-color:rgb(136, 243, 202);
+button {
+    background-color: rgb(136, 243, 202);
     border-radius: 6px;
-    padding:8px;   
+    padding: 8px;
+    margin:8px;
 }
 
 button:hover {
     background-color: rgb(184, 226, 69);
-    cursor: pointer; /* Change cursor to pointer on hover */
-  }
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+input{
+    margin:8px;
+    padding:8px;
+}
