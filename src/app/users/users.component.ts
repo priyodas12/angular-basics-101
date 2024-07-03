@@ -12,6 +12,7 @@ export class UsersComponent {
   changedTitle: string = "changedTitle";
   singleClickedNumber: number = 0;
   doubleClickedNumber: number = 0;
+  mouseOverNumber: number = 0;
 
   numberChangeOnSingleClick() { 
     this.singleClickedNumber += 1;
@@ -20,5 +21,9 @@ export class UsersComponent {
   numberChangeOnDoubleClick() { 
     this.initialTitle = this.changedTitle;
     this.doubleClickedNumber += 1;
+  }
+
+  onMouseOver(event:MouseEvent) { 
+    this.mouseOverNumber += 1;
   }
 }

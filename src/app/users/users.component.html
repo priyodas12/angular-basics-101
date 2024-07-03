@@ -2,17 +2,28 @@
 <mat-card class="custom-card"> 
     <mat-card-header class="custom-card-header"> 
         <mat-card-title> 
-            <h4>{{this.initialTitle}}</h4>
+            <h2>
+                Single click event
+            </h2>
             <h5>The button was single clicked {{this.singleClickedNumber}} times.</h5>
-            <button mat-flat-button (click)="numberChangeOnSingleClick()">Change Title(Single click)</button>
+            <button mat-flat-button (click)="numberChangeOnSingleClick()">Single click)</button>
             <hr>
+            <h2>
+                Double click event
+            </h2>
             <h5>The button was double clicked {{this.doubleClickedNumber}} times.</h5>
-            <button  mat-raised-button (dblclick)="numberChangeOnDoubleClick()">Change Title(Double click)</button>
+            <button  mat-raised-button (dblclick)="numberChangeOnDoubleClick()">(Double click)</button>
+            <hr>
+            <h2>
+                Mouse-Over event
+            </h2>
+            <!-- mouseover, mousedown, mouseout, mouseup ,mousemove-->
+            <h5>Mouse over on button {{this.mouseOverNumber}} times.</h5>
+            <button  mat-raised-button (mousemove)="onMouseOver($event)">(Mouse Over)</button>
+        
         </mat-card-title> 
     </mat-card-header> 
     <mat-card-content class="custom-card-content"> 
-        <p> 
-            test context
-        </p> 
+   
     </mat-card-content> 
 </mat-card>
