@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-users',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
+  initialTitle: string = "testTitle";
+  changedTitle: string = "changedTitle";
+  singleClickedNumber: number = 0;
+  doubleClickedNumber: number = 0;
 
+  numberChangeOnSingleClick() { 
+    this.singleClickedNumber += 1;
+  }
+
+  numberChangeOnDoubleClick() { 
+    this.initialTitle = this.changedTitle;
+    this.doubleClickedNumber += 1;
+  }
 }

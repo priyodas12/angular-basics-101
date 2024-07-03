@@ -1,11 +1,16 @@
 
-<mat-card> 
-    <mat-card-header> 
+<mat-card class="custom-card"> 
+    <mat-card-header class="custom-card-header"> 
         <mat-card-title> 
-            test title
+            <h4>{{this.initialTitle}}</h4>
+            <h5>The button was single clicked {{this.singleClickedNumber}} times.</h5>
+            <button mat-flat-button (click)="numberChangeOnSingleClick()">Change Title(Single click)</button>
+            <hr>
+            <h5>The button was double clicked {{this.doubleClickedNumber}} times.</h5>
+            <button  mat-raised-button (dblclick)="numberChangeOnDoubleClick()">Change Title(Double click)</button>
         </mat-card-title> 
     </mat-card-header> 
-    <mat-card-content> 
+    <mat-card-content class="custom-card-content"> 
         <p> 
             test context
         </p> 

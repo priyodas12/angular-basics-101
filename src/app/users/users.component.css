@@ -1,0 +1,14 @@
+.custom-card {
+    padding: 10px;
+    margin: 20px;
+}
+
+.custom-card-header{
+    color: green;
+    margin: 20px;
+}
+
+.custom-card-content{
+    margin: 20px;
+    color :red;
+}
