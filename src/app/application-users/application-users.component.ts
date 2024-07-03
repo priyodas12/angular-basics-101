@@ -28,4 +28,8 @@ export class ApplicationUsersComponent {
     'Benjamin Young',
     'Ava Walker',
   ];
+
+  removeApplicationUser(userIndex: number) {
+    this.appliationUserNames.splice(userIndex, 1);
+  }
 }

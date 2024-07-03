@@ -1,1 +1,7 @@
-<p>{{userId+1}}.  {{userName | titlecase}}</p>
+<div>
+    {{userName | titlecase}}
+    <button mat-mini-fab (click)="emitDeleteIntemation()">
+        <mat-icon>delete</mat-icon>
+    </button>
+</div>
+

@@ -18,9 +18,16 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { ApplicationUsersComponent } from './application-users/application-users.component';
 import { SingleApplicationUserComponent } from './application-users/single-application-user/single-application-user.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, ApplicationUsersComponent, SingleApplicationUserComponent],
+  declarations: [
+    AppComponent,
+    UsersComponent,
+    ApplicationUsersComponent,
+    SingleApplicationUserComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,6 +38,8 @@ import { SingleApplicationUserComponent } from './application-users/single-appli
     MatDividerModule,
     MatButtonModule,
     MatExpansionModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

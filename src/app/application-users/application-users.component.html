@@ -1,7 +1,13 @@
 <div class="container">
     <h2>Application Users</h2>
     <hr>
-    <div *ngFor="let name of appliationUserNames; let userId=index">
-        <app-single-application-user [userName]=name [userId]=userId></app-single-application-user>
-    </div>
+    <ol>
+        <li class="parent" *ngFor="let name of appliationUserNames; let userId=index">
+            <app-single-application-user class="child" [userName]=name [userId]=userId
+                (deleteUser)="removeApplicationUser(userId)"></app-single-application-user>
+            <!-- <button class="child" mat-mini-fab (click)="removeApplicationUser(userId)">
+            <mat-icon>delete</mat-icon>
+        </button> -->
+        </li>
+    </ol>
 </div>

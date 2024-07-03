@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-single-application-user',
@@ -11,4 +11,11 @@ export class SingleApplicationUserComponent {
 
   @Input()
   userId: number = 0;
+
+  @Output()
+  deleteUser: EventEmitter<number> = new EventEmitter<number>();
+
+  emitDeleteIntemation() {
+    this.deleteUser.emit(this.userId);
+  }
 }
