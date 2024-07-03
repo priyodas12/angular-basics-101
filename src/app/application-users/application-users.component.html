@@ -1,13 +1,11 @@
-<div class="container">
     <h2>Application Users</h2>
     <hr>
-    <ol>
-        <li class="parent" *ngFor="let name of appliationUserNames; let userId=index">
-            <app-single-application-user class="child" [userName]=name [userId]=userId
+    <ol class="custom-ordered-list">
+        <li class="list-item"*ngFor="let name of appliationUserNames; let userId=index">
+            <app-single-application-user [userName]=name [userId]=userId
                 (deleteUser)="removeApplicationUser(userId)"></app-single-application-user>
             <!-- <button class="child" mat-mini-fab (click)="removeApplicationUser(userId)">
             <mat-icon>delete</mat-icon>
         </button> -->
         </li>
     </ol>
-</div>

@@ -1,7 +1,5 @@
-<div>
-    {{userName | titlecase}}
-    <button mat-mini-fab (click)="emitDeleteIntemation()">
+
+<span> {{userName | titlecase}}</span>
+    <button class="delete-button" mat-icon-button (click)="emitDeleteIntemation()">
         <mat-icon>delete</mat-icon>
     </button>
-</div>
-
