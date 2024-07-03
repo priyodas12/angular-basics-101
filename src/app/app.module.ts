@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { MatCardModule } from '@angular/material/card';
 
@@ -27,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatDividerModule,
     MatButtonModule,
+    MatExpansionModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

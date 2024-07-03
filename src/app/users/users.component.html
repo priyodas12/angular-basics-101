@@ -5,6 +5,7 @@
             <h2>
                 Single click event
             </h2>
+            <!--Interpolation-->
             <h5>The button was single clicked {{this.singleClickedNumber}} times.</h5>
             <button mat-flat-button (click)="numberChangeOnSingleClick()">Single click</button>
             <hr>
@@ -42,11 +43,16 @@
             <hr>
             <!--Angular Directives-->
 
-            <div *ngIf="isShowEnable && (mouseOverNumber<5 )">
-                <p>This is conditional </p>
+            <div *ngIf="isShowEnable && (mouseOverNumber<5 ); else elseBlock">
+                <p>This is conditional</p>
             </div>
-
-
+            <ng-template #elseBlock>
+                <p>Unconditional</p>
+            </ng-template>
+            <hr>
+            <div *ngFor="let product of products; let i = index">
+                <p>{{i+1}}.{{product}}</p>
+            </div>
         </mat-card-title>
     </mat-card-header>
     <mat-card-content class="custom-card-content">

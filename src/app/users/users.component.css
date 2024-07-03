@@ -1,6 +1,7 @@
 .custom-card {
     padding: 10px;
     margin: 20px;
+    background-color: gainsboro;
 }
 
 .custom-card-header {

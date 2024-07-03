@@ -30,6 +30,9 @@ export class UsersComponent {
   /**directives */
   isShowEnable: boolean = true;
 
+  //ngFor
+  products: string[] = ['sofa', 'laptop', 'bed', 'table', 'Tv'];
+
   numberChangeOnSingleClick() {
     this.singleClickedNumber += 1;
   }
