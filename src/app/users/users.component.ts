@@ -12,6 +12,8 @@ export class UsersComponent {
   doubleClickedNumber: number = 0;
   mouseOverNumber: number = 0;
 
+  willContextMenuShow: boolean = true;
+
   /**One way data binding types */
 
   //property binding
@@ -48,5 +50,10 @@ export class UsersComponent {
 
   onClickIncrease() {
     this.myAge = this.myAge + 1;
+  }
+
+  toggleContextMenu(showContextMenu: boolean, event: MouseEvent) {
+    console.log(event);
+    this.willContextMenuShow = showContextMenu;
   }
 }
