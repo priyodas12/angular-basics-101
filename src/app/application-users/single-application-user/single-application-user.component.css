@@ -1,0 +1,6 @@
+ .delete-button {
+
+   color: brown;
+   flex-shrink: 0;
+   /* Prevent the button from shrinking */
+ }

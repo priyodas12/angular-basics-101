@@ -54,6 +54,7 @@ export class UsersComponent {
 
   toggleContextMenu(showContextMenu: boolean, event: MouseEvent) {
     console.log(event);
+    
     this.willContextMenuShow = showContextMenu;
   }
 }

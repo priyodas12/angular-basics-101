@@ -28,14 +28,10 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-
+  
   .item-name {
     flex-grow: 1; /* Take up remaining space */
-    margin-right: 10px; /* Add space between the name and the button */
+    margin-right: 20px; /* Add space between the name and the button */
   }
-  
-  .list-item button {
-    padding: 50px;
-  }
-  
+ 
   
