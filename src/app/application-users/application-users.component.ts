@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserServicesService } from '../services/user-services.service';
 
 @Component({
   selector: 'app-application-users',
@@ -6,30 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './application-users.component.css',
 })
 export class ApplicationUsersComponent {
-  appliationUserNames: string[] = [
-    'John Smith',
-    'Emily Johnson',
-    'Michael Williams',
-    'Jessica Brown',
-    'David Jones',
-    'Sarah Miller',
-    'Daniel Davis',
-    'Laura Wilson',
-    'Robert Anderson',
-    'Olivia Taylor',
-    'James Thomas',
-    'Emma Moore',
-    'William Jackson',
-    'Sophia Martin',
-    'Joseph White',
-    'Isabella Harris',
-    'Christopher Clark',
-    'Mia Lewis',
-    'Benjamin Young',
-    'Ava Walker',
-  ];
+  applicationUsers: string[] = [];
+  constructor(private userService: UserServicesService) {
+    this.applicationUsers = userService.appliationUserNames;
+  }
 
   removeApplicationUser(userIndex: number) {
-    this.appliationUserNames.splice(userIndex, 1);
+    this.applicationUsers.splice(userIndex, 1);
   }
 }
