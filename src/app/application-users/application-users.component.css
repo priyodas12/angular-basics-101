@@ -1,37 +1,10 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: azure;
+.user-container {
+  padding: 20px;
+  margin: 20px;
 }
 
 h2 {
-    color: rgb(49, 156, 243)
-}
-
-.container {
-    margin: 10px;
-    padding: 10px;
-}
-
-/* app.component.css */
-.custom-ordered-list {
-    padding: 0;
-    list-style-type: none; /* Remove default list styling */
+    color: darkslategray;
+      font-size: x-large;
+      font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  
-  .list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .item-name {
-    flex-grow: 1; /* Take up remaining space */
-    margin-right: 20px; /* Add space between the name and the button */
-  }
- 
-  
