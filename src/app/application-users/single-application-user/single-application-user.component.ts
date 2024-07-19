@@ -36,6 +36,7 @@ export class SingleApplicationUserComponent implements OnInit, AfterViewInit {
     'favoriteAnimal',
     'favoriteColor',
     'sal',
+    'age',
   ];
 
   dataSource = new MatTableDataSource<User>();

@@ -65,6 +65,23 @@ export class AddUserFormComponent {
       userFormData.isActive = false;
     }
     this.userService.saveData(userFormData);
+    this.resetForm(userFormData);
+  }
+
+  resetForm(userFormData:User) {
+    userFormData = {
+      userId: 0,
+      username: '',
+      city: '',
+      fullName: '',
+      email: '',
+      gender: Gender.Other,
+      isActive: false,
+      favoriteAnimal: '',
+      favoriteColor: '',
+      sal: 0,
+      age: 0,
+    };
   }
 
   removeUser() {}
