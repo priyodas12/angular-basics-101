@@ -7,15 +7,66 @@
   color: darkgreen
 }
 
-button {
-  margin: 4px;
-  padding: 4px;
-  min-width: 100px;
+/* Basic button styling */
+.styled-button {
+  background-color: #80f487;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 4px;
+
+  padding: 10px 20px;
+
+  font-size: 34px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.styled-button:hover {
+  background-color: #21f52b;
+
+  transform: translateY(-2px);
+
+}
+
+
+.styled-button:active {
+  background-color: #29a337;
+
+  transform: translateY(0);
+
+}
+
+
+.styled-button:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 3px rgba(109, 217, 90, 0.4);
+
+}
+
+
+.styled-button:disabled {
+  background-color: #ccc;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
 }
 
 mat-form-field {
-  margin: 4px;
-  padding: 4px;
+  margin: 2px;
+    padding: 2px;
   max-width: 200px;
   max-height: 120px;
 }

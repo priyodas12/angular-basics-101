@@ -19,6 +19,8 @@ export class UserListComponent implements OnInit, OnChanges {
 
   dataSource: PeriodicUserElement[] = [];
 
+  editMode: boolean = false;
+
   displayedColumns: string[] = [
     'userId',
     'userName',
@@ -59,5 +61,10 @@ export class UserListComponent implements OnInit, OnChanges {
       },
     );
     console.log('loadUserData', this.dataSource);
+  }
+
+  onEdit(editUser: any) {
+    console.log(editUser);
+    this.editMode = true;
   }
 }
