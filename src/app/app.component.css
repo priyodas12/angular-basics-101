@@ -1,8 +1,6 @@
-body {
-    margin: 0px;
-    padding: 0px;
-}
-
-.heading{
-    color: blue
+.container {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  margin: 20px;
 }

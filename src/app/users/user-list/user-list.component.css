@@ -1,0 +1,30 @@
+.mat-aplication-table {
+  background-color: #536cf8;
+  color: azure;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 5px;
+  margin: 10px;
+}
+
+.mat-table-container {
+  margin: 10px;
+  padding: 5px;
+  max-width: 95%;
+  border-radius: 10px;
+
+}
+
+table {
+  width: 95%;
+
+}
+
+.table-container {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: darkslategray
+}
+
+h4 {
+  text-align: center;
+}

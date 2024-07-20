@@ -1,0 +1,45 @@
+<div class="container">
+  <h3>Admin Portal</h3>
+
+  <div class="form-container">
+    <form class="my-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>UserName</mat-label>
+        <input matInput formControlName="userName" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>EmailId</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="emailId" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Gender</mat-label>
+        <select matNativeControl required formControlName="gender">
+          <option *ngFor="let g of genderArray">{{g|uppercase}}</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Salary</mat-label>
+        <input matInput mdInput type="number" formControlName="salary">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Status Type</mat-label>
+        <select matNativeControl formControlName="userType">
+          <option *ngFor="let s of statusArray">{{s|uppercase}}</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput mdInput type="number" formControlName="age">
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Add</button>
+    </form>
+  </div>
+</div>

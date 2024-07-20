@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-items: right;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: darkgreen
+}
+
+button {
+  margin: 4px;
+  padding: 4px;
+  min-width: 100px;
+}
+
+mat-form-field {
+  margin: 4px;
+  padding: 4px;
+  max-width: 200px;
+  max-height: 120px;
+}
+
+h3 {
+  margin: 50px
+}
