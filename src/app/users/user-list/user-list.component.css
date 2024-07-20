@@ -1,30 +1,41 @@
 .mat-aplication-table {
-  background-color: #536cf8;
-  color: azure;
+  background-color: #378CE7;
+    color: rgb(238, 217, 201);
   font-size: large;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 5px;
-  margin: 10px;
-}
 
-.mat-table-container {
-  margin: 10px;
-  padding: 5px;
-  max-width: 95%;
-  border-radius: 10px;
-
-}
-
-table {
-  width: 95%;
-
-}
-
-.table-container {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: darkslategray
 }
 
 h4 {
   text-align: center;
+}
+
+button {
+  padding: 5px;
+margin:
+    5px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.mat-table-responsive {
+  width: 100%;
+  min-width: 600px;
+}
+
+.row:nth-child(even) {
+  background-color: #e6ecee;
+
+}
+
+.row:nth-child(odd) {
+  background-color: #A7E6FF;
+}
+
+@media (max-width: 600px) {
+  .mat-table-responsive {
+    min-width: 100%;
+  }
 }

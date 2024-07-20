@@ -18,7 +18,7 @@ export class UserServicesService {
   getData(): Observable<any> {
     return this.httpService.get<any>(this.getApiUrl).pipe(
       map((response: any) => {
-        console.log(response);
+        console.log(this.getApiUrl, response);
         return response;
       }),
       catchError((error) => {
@@ -30,11 +30,11 @@ export class UserServicesService {
   }
 
   saveData(requestUser: User): any {
-    console.log('requestUser', requestUser);
+
     return this.httpService
       .post(this.postApiUrl, requestUser)
       .subscribe((response: any) => {
-        console.log(response);
+        console.log(this.postApiUrl, response);
       });
   }
 
@@ -43,7 +43,7 @@ export class UserServicesService {
     return this.httpService
       .delete(this.deleteApiUrl + '/' + requestUserId)
       .subscribe((response: any) => {
-        console.log(response);
+        console.log(this.deleteApiUrl, response);
       });
   }
 }

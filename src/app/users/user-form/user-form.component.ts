@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Gender } from '../../model/gender';
 import { Status } from '../../model/status';
@@ -10,6 +10,7 @@ import { UserServicesService } from '../../services/user-services.service';
   styleUrl: './user-form.component.css',
 })
 export class UserFormComponent {
+  @Output() doesRefreshRequired = new EventEmitter<boolean>();
   genderList = Gender;
   statusTypeList = Status;
 
@@ -42,7 +43,7 @@ export class UserFormComponent {
   }
 
   refreshUserData() {
-    this.userService.getData();
+    this.doesRefreshRequired.emit(true);
   }
 
   onSubmit() {
@@ -53,5 +54,21 @@ export class UserFormComponent {
       this.userService.saveData(user);
     }
     this.refreshUserData();
+    this.resetUserForm();
+  }
+
+  resetUserForm() {
+    this.myForm = this.fb.group({
+      userName: '',
+      emailId: '',
+      firstName: '',
+      lastName: '',
+      userType: '',
+      city: '',
+      designation: '',
+      gender: '',
+      age: '',
+      salary: '',
+    });
   }
 }

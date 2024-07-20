@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { PeriodicUserElement } from '../../model/userElement';
 import { UserServicesService } from '../../services/user-services.service';
 
@@ -7,7 +13,10 @@ import { UserServicesService } from '../../services/user-services.service';
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css',
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent implements OnInit, OnChanges {
+  @Input()
+  refreshIndicator: boolean = false;
+
   dataSource: PeriodicUserElement[] = [];
 
   displayedColumns: string[] = [
@@ -15,7 +24,6 @@ export class UserListComponent implements OnInit {
     'userName',
     'firstName',
     'lastName',
-    'password',
     'emailId',
     'designation',
     'salary',
@@ -23,12 +31,22 @@ export class UserListComponent implements OnInit {
     'city',
     'age',
     'gender',
+    'action',
   ];
 
   constructor(public userService: UserServicesService) {}
 
   ngOnInit() {
     this.loadUserData();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+    if (changes['refreshIndicator']) {
+      console.log('refresh', this.dataSource);
+      this.loadUserData();
+    }
+    this.refreshIndicator = !this.refreshIndicator;
   }
 
   loadUserData() {
@@ -40,6 +58,6 @@ export class UserListComponent implements OnInit {
         console.log('Error while loading user data!');
       },
     );
-    console.log(this.dataSource);
+    console.log('loadUserData', this.dataSource);
   }
 }

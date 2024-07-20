@@ -1,4 +1,4 @@
 <div class="container">
-  <app-user-form></app-user-form>
-  <app-user-list></app-user-list>
+  <app-user-form (doesRefreshRequired)="setRefreshFlag($event)"></app-user-form>
+  <app-user-list [refreshIndicator]="refreshUsersIndicator"></app-user-list>
 </div>
